@@ -32,10 +32,10 @@ VR_FoodWaste_Apple_Experience/
 
 ### Prerequisites
 
-- **Unity 2021.3 LTS or later**: The project uses Unity as the primary development environment.
-- **VR Headset**: Oculus Quest, HTC Vive, or other OpenXR-compatible VR headsets.
-- **XR Interaction Toolkit**: Unity’s toolkit for VR interactions.
-- **Oculus/Meta SDK (Optional)**: If using an Oculus device, consider adding the Oculus Integration package from the Unity Asset Store.
+- **Unity 2022.3 LTS or later**: The project uses Unity as the primary development environment, required for visionOS and Apple Vision Pro support.
+- **Xcode 15.2 or later**: includes the visionOS SDK.
+- **Apple Vision Pro**: the primary device for this MR (mixed reality) project.
+- **PolySpatial package**: Unity’s package for visionOS development.
 
 ### Installation
 
@@ -46,24 +46,30 @@ VR_FoodWaste_Apple_Experience/
    ```
 
 2. **Open in Unity**:
-   - Open the project folder in Unity Hub and select the appropriate Unity version (2021.3 LTS or later).
+   - Open the project folder in Unity Hub and select the appropriate Unity version (2022.3 LTS or later).
 
 3. **Install XR Plug-in Management**:
-   - Go to `Edit > Project Settings > XR Plug-in Management` and enable your VR device (e.g., Oculus, OpenXR).
+   - Go to `Edit > Project Settings > XR Plug-in Management` and enable visionOS under OpenXR.
 
 4. **Add Required Packages**:
-   - Add the **XR Interaction Toolkit** from the Unity Package Manager.
+   - Add the **XR Interaction Toolkit** from the Unity Package Manager. (PolySpatial)
+
+5. **Configure the Project**:
+   - In Build Settings, set the platform to visionOS and ensure all MR-specific settings are applied.
 
 ### Usage
 
 1. **Launch the Scene**:
    - Open the `VR_Environment/AppleExperienceScene` in Unity and play the scene in VR mode.
 
-2. **Experience the Apple’s Perspective**:
-   - Put on your VR headset and experience the simulation as an apple placed in a refrigerator. Observe the gradual effects of decay over time.
+2. **Deploy to Vision Pro**:
+   - Connect your Apple Vision Pro in Developer Mode to Mac.
+   - Build and run the project on the device through Xcode.
 
 3. **Experiment with Interactions**:
    - Move between different positions within the refrigerator as the apple. Experience the effects of decay and, eventually, disposal from the apple’s point of view.
+   - Experience the journey of the apple in an MR environment. Use hand gestures for interactions and observe the real-time changes in the apple's condition.
+
 
 ### Project Status
 
